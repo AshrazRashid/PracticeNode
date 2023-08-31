@@ -1,19 +1,9 @@
-const BlogModel = require("../models/blog");
+const BlogModel = require("../models/Blog");
 
 exports.getAllBlogs = async () => {
   //return await BlogModel.find();
 
-  app.get("/Blog", async (req, res) => {
-    const collection = db.collection("Blog");
-
-    try {
-      const posts = await collection.find().toArray();
-      return res.json(posts);
-    } catch (err) {
-      console.error("Error retrieving blog posts:", err);
-      return res.status(500).json({ error: "Internal server error" });
-    }
-  });
+  return await BlogModel.find();
 };
 
 exports.createBlog = async (blog) => {
