@@ -1,8 +1,6 @@
 const BlogModel = require("../models/Blog");
 
 exports.getAllBlogs = async () => {
-  //return await BlogModel.find();
-
   return await BlogModel.find();
 };
 
